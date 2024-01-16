@@ -1,0 +1,364 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: "Poppins", sans-serif;
+}
+
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+/* navigation style here */
+.header{
+    text-align: center; 
+    position: fixed;
+    width: 100%;
+  
+}
+ .logo{
+    display: flex;
+    width: 100%;
+}
+.logo-title{
+    color: #131318;
+    font-size: 1.75em;
+    font-weight: 800;
+}
+.logo-title .trips{
+    color: #FF5400;
+}
+
+nav{
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    /* display: none; */
+    transform: scale(1, 0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+nav li{
+    margin-bottom: 1em;
+     list-style: 0;
+}
+nav a{
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    text-transform: uppercase;
+    margin-left: 0.5em;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+nav a:hover{
+    color: #5f5c5c;
+   
+}
+.nav-toggle:checked ~ nav {
+ display: block;
+  transform: scale(1, 1);
+}
+.nav-toggle{
+    display: none; 
+}
+.nav-toggle-label{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1.25em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  
+}
+.nav-toggle-label span, .nav-toggle-label span::before, 
+.nav-toggle-label span::after{
+    display: block;
+    background-color: #000;
+    height: 2px;
+    width: 2em;
+    border-radius: 2px;
+    position: relative;
+
+}
+.nav-toggle-label span::before, 
+.nav-toggle-label span::after{
+    content: '';
+    position: absolute;
+}
+.nav-toggle-label span::before{
+    bottom: 7px;
+}
+.nav-toggle-label span::after{
+    top: 7px;
+}
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+/* Hero Section style*/
+.hero{
+    max-width: 1440px;
+    width: 75%;
+    margin: 0 auto;
+    background-image: url('../images/hero-image.png');
+    object-fit: cover;
+    text-align: center;
+    border-radius: 16px;
+    background-repeat: no-repeat;
+    /* background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); */
+
+ 
+}
+.hero-title{
+    color: #FFF;
+    font-size: 3rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.hero-text{
+    text-align: center;
+    padding: 160px 185px ;
+}
+
+.section-description{
+    color: #FFF;
+    font-size: 1rem;
+    line-height: 26px;
+}
+.input-box{
+border-radius: 8px;
+padding: 16px 0;
+background: rgba(255, 255, 255, 0.30);
+display: flex;
+gap: .5rem;
+justify-content: center;
+position: relative;
+}
+.input-box input{
+    width: 130px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 0;
+}
+.input-box .find-button{
+    
+    padding-left: 1.5rem;   
+}
+.common-button-main{
+    color: #FFF;
+    border-radius: 8px;
+    background: #FF5400;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    padding: 12px 3rem;
+}
+.common-button{
+    color: #FFF;
+    border-radius: 8px;
+    background: #FF5400;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    padding: 12px 1.5rem;
+    margin-top: 2rem;
+}
+ 
+.angle-down-1{
+    position: absolute;
+    left: 240px;
+    top: 24px;
+   
+  
+}
+.angle-down-2{
+    position: absolute;
+    top: 24px;
+    right: 180px;
+     
+}
+.search{
+    position: absolute;
+    top: 28px;
+    right: 126px;
+}
+.popular-tours{
+    max-width: 1440px;
+    width: 75%;
+    margin: 130px auto; 
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);  
+    grid-template-rows: repeat(1, 1fr);
+    gap: 3.5rem;
+    justify-content: space-between;
+}
+.list-item{
+    padding-left: 1rem;
+   
+}
+.list-item>li{
+   margin-bottom: 2rem; 
+   line-height: 2rem;
+}
+.popular-tours-text{
+    width: 100%;
+    max-width: 577px;
+    grid-column: 1 /span 6;
+}
+.popular-tours-text > *{
+    margin-bottom: 2rem;
+}
+.popular-tours-image{
+    grid-column: 7 /span 6;  
+}
+.popular-tours-image img{
+    width: 100%;
+    max-width: 540px;
+    max-height: 550px;
+    height: 100%;
+    object-fit: cover;
+}
+.common-section-title{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+ 
+}
+.popular-description{
+    color: #000;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+.destination-section{
+    max-width: 1440px;
+    width: 75%;
+    margin: 0 auto;
+    text-align: center;
+}
+#destination-description{
+    text-align: center;
+    color: #000;
+
+}
+
+.destination-image{
+   display: grid;
+   width: 100%;
+   margin: 0 auto;
+   grid-template-columns: repeat(12, 1fr);
+   grid-template-rows: repeat(3, 1fr);
+   gap: 10px; 
+}
+
+.collage img{
+    max-width: 374;
+    width: 100%;
+    max-height: 286px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.image-collage-1{
+    grid-column: 1 /span 6;
+    grid-row: 1;
+ 
+}
+.image-collage-2{
+    grid-column: 7 /span 6;
+   grid-row: 1;
+}
+.image-collage-3{
+    grid-column: 1 /span 4;
+    grid-row: 2;
+}
+.image-collage-4{
+    grid-column: 5 /span 5;
+    grid-row: 2;
+}
+.image-collage-5{
+    grid-column: 10 /span 3;
+    grid-row: 2;
+}
+.image-collage-6{
+    grid-column: 1 /span 5;
+    grid-row:3;
+}
+.image-collage-7{
+    grid-column: 6 /span 7;
+    grid-row: 3;
+ 
+}
+
+
+
+
+
+
+
+
+/* Media Screen Responsive */
+@media screen and (max-width:600px) {
+    .hamburger,.toggle-menu{
+        display: block
+    }
+    .menu{
+        justify-content: start;
+        align-items: center;
+    }
+    al
+
+.popular-tours{
+   
+    grid-template-columns: ;
+}
+.hero-title{
+    font-size: 1.25rem;
+    font-weight: 800;
+   
+}
+.hero-text{
+    text-align: center;
+    padding: 1rem 5rem ;
+}
+
+.section-description{
+    font-size: 12px;
+    line-height: 12px;
+}
+.input-box{
+padding: 12px 0;
+flex-direction: column;
+gap: .5rem .5rem;
+justify-content: center; 
+background-repeat: no-repeat;
+text-align: center;
+}
+
+.angle-down-1{
+  
+    left: 140px;
+    top: 24px;
+   
+  
+}
+.angle-down-2{
+
+    top: 112px;
+    right: 48px;
+     
+}
+.search{
+    right:145px;
+    top: 156px;
+    text-align: center;
+}
+} 
