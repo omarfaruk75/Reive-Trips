@@ -192,7 +192,7 @@ justify-content: space-around;
 /*  End Hero Section */
 /* Start Popular Section  */
 .popular-tours{ 
-     max-width: 1440px;
+    max-width: 1440px;
     width: 75%;
     margin: 130px auto; 
     display: grid;
@@ -201,6 +201,7 @@ justify-content: space-around;
     align-items: center;
 
 }
+
 .list-item{
     padding-left: 1rem;
    
@@ -493,9 +494,7 @@ font-weight: 800;
 
 .picks-package-heading-text{
     display: flex;
-    align-items: center;
-     
-    
+    align-items: center;   
 }
 .picks-logo-title{
     color: #131318;
@@ -626,9 +625,6 @@ font-weight: 800;
         left: 60%;
         transform: rotate(-45deg);
        
-
-
-
     }
     .web-name{
         color: #FFF;
@@ -737,10 +733,11 @@ font-weight: 800;
     }
 } */
 /* Popular Section for Mobile */
-.popular-tours{
+.position-image{
    
     grid-template-columns: 1fr;
 }
+
 .popular-tours-text{
     grid-column: 1 /span 1;
     grid-row: 1 /span 1;
@@ -897,5 +894,54 @@ grid-template-columns: 1fr;
  
 }
 /*End Popular Touring Spot Section */
+.box-1, .box-2, .box-3{
+    max-width: 100%;
+    border-radius: 8px;
+    height: auto;
+    border: 2px solid #FFF;
+    background: rgba(255, 255, 255, 0.80);
+    padding: 0.5rem;
 
+}
+.box-1.fa-person a, .box-2 .fa-person a , .box-3 .fa-person a{
+    font-size: 1rem;
+}
+.card-description{
+   
+    font-size: 0.8rem;
+    padding: 8px 0;
+}
+.newsletter{
+        flex-direction: column;
+        gap: 1rem;
+        padding: 12px 0;
+}
+.picks-package-heading-text{
+    flex-direction: row;
+     justify-content: center;
+}
+.picks-logo-title{
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 0.8rem;
+
+}
+ .position-image{
+        position: static;
+        margin: 0 auto;
+
+      
+    }
+       .picks-package{
+     
+        flex-direction: column;   
+      
+    } 
+    .newsletter-card{
+      
+        position: static;
+        transform: rotate(0deg);
+       
+    }
 }
