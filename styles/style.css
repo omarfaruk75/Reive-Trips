@@ -96,12 +96,26 @@ nav>ul>li{
     width: 75%;
     margin: 0 auto;
     background-image: url('../images/hero-image.png');
-    object-fit: cover;
-    text-align: center;
+    background-size: cover;
+    background-position: center;
+
+    
     border-radius: 16px;
     background-repeat: no-repeat;
-    /* background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); */
     margin-top: 60px;
+    display: grid;
+    place-content: center;
+    text-align: center;
+    min-height: 500px;
+    position: relative;
+    isolation: isolate;
+}
+.hero::after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); 
+    opacity: 0.1;
 }
 .hero-title{
     color: #FFF;
