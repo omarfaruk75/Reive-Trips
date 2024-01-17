@@ -98,8 +98,6 @@ nav>ul>li{
     background-image: url('../images/hero-image.png');
     background-size: cover;
     background-position: center;
-
-    
     border-radius: 16px;
     background-repeat: no-repeat;
     margin-top: 60px;
@@ -134,7 +132,7 @@ nav>ul>li{
     color: #fff;
     font-size: 1rem;
     line-height: 26px;
-    font-size: 12px;
+
 }
 .input-box{
 border-radius: 8px;
@@ -147,7 +145,8 @@ align-items: center;
 justify-content: space-around;
 }
 .input-box input{
-    width: 130px;
+    width: 100%;
+    max-width: 140px;
     padding: 1rem 1.5rem;
     border-radius: 8px;
     border: 0;
@@ -176,16 +175,22 @@ justify-content: space-around;
 }
  
 .angle-down-1{
-    position: relative;
-    right: 30px;
+     position: relative;
+     bottom: 50%;
+     right: 20%;
 }
 .angle-down-2{
      position: relative;
-     right: 30px; 
+      bottom: 50%;
+      right: 20%;
 }
 .search{
     position: relative;
-    left: 24px;
+    bottom: 50%;
+    left: 16%;
+    text-align: center;
+}
+.search::placeholder{
     text-align: center;
 }
 /*  End Hero Section */
@@ -623,7 +628,7 @@ font-weight: 800;
         bottom: 100px;
         left: 60%;
         transform: rotate(-45deg);
-       
+ 
     }
     .web-name{
         color: #FFF;
@@ -718,18 +723,21 @@ font-weight: 800;
 /* Start Hero Section for Mobile */
 .input-box{
 gap: 0.5rem;
-
 flex-direction: column;
 
 }
 .hero-title{
-    font-size: 1.25rem;
+    font-size: 2rem;
     font-weight: 800;
    
 }
 .hero-text{
     text-align: center;
     padding: 1rem 5rem ;
+}
+.section-description{
+ 
+    font-size: 1rem;
 }
 
 .input-box{
@@ -746,31 +754,38 @@ flex-direction: column;
     border: 0;
 }
 .angle-down-1{
-  
-    left: 55px;
-    top: -30px;
-  
+     position: relative;
+     bottom: 50%;
+     right: 20%;
 }
 .angle-down-2{
-
-       top: -30px;
-    right: -57px;
-     
+     position: relative;
+      bottom: 50%;
+      right: 20%;
+}
+.angle-down-0{
+   padding-left: 10px;
 }
 .search{
-    top: 36px;
-    left: -64px;
-  
+    position: relative;
+    bottom: 50%;
+    left: 16%;
+    text-align: center;
 }
 .input-box input{
     width: 130px;
-    padding: 1rem;
+   
     border-radius: 8px;
     border: 0;
 }
 .input-box .find-button{
-    
     padding-left:0;   
+}
+
+.search::placeholder{
+    padding-left: 20px;
+    color: #FFF;
+    text-align: center;
 }
 .common-button-main{
     color: #000;
@@ -896,9 +911,10 @@ grid-template-columns: 1fr;
 }
  .position-image{
         position: static;
-        margin: 0 auto;
-
-      
+        display: flex;
+        justify-content: center;
+    
+        margin: 0 auto; 
     }
        .picks-package{
      
@@ -906,9 +922,17 @@ grid-template-columns: 1fr;
       
     } 
     .newsletter-card{
-      
         position: static;
-        transform: rotate(0deg);
-       
+        transform: rotate(0deg);  
+        width: 50%;
+        padding: 12px;
+        margin: 0 auto;
+     
     }
+    .common-section-title{
+
+    font-size: 1.5rem;
+  
+ 
+}
 }
