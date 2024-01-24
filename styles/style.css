@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-
+/* Common Style Css Design */
 *{
     box-sizing: border-box;    
     margin: 0;
@@ -14,6 +14,17 @@ body {
     --color2: #FFF;
     --color3: #424247;
 }
+.container{
+    width: 75%;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container > section{
+    margin-top: 4rem;
+}
+/* End Common Style Css Design */
+
 
 /* Start NavBar Design */
 
@@ -25,11 +36,7 @@ body {
 .logo-title .trips{
     color: #FF5400;
 }
-.header{
-    width: 75%;
-    max-width: 1140px;
-    margin: 0 auto;
-}
+
 .nav-bar {
     display: flex;
     justify-content: space-between;
@@ -91,12 +98,9 @@ nav>ul>li{
 #check {display: none;}
 /* End NavBar Design */
 
-/* Hero Section style*/
+
+/* Start Hero Section style*/
 .hero{
-    max-width: 1440px;
-    width: 75%;
-    /* max-height: 500px; */
-    margin: 0 auto;
     background-image: url('../images/hero-image.png');
     background-size: cover;
     background-position: center;
@@ -115,8 +119,8 @@ nav>ul>li{
     content: '';
     position: absolute;
     z-index: -1;
-    background: linear-gradient(180deg, rgba(19, 19, 24, 0.80) 0%, rgba(19, 19, 24, 0.00) 100%); 
     opacity: 0.1;
+     background: linear-gradient(180deg, rgba(0, 0, 0, 0.265) 0%, rgba(8, 8, 9, 0.078) 0%); 
 }
 .hero-text{
     width: 80%;
@@ -135,25 +139,7 @@ nav>ul>li{
     font-size: 1rem;
     padding: 0 0 1rem 0;
 }
-.common-button-main{
-    color: #FFF;
-    border-radius: 8px;
-    background: #FF5400;
-    font-size: 16px;
-    font-weight: 700;
-    border: 0;
-    padding: 12px 1rem;
-}
-.common-button{
-    color: #FFF;
-    border-radius: 8px;
-    background: #FF5400;
-    font-size: 16px;
-    font-weight: 700;
-    border: 0;
-    padding: 12px 1.5rem;
-    
-}
+
  .input-div{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -171,89 +157,83 @@ nav>ul>li{
     justify-content: center;
     height: 2.5rem;
     padding: 0 1rem;
-    color: #000;
-   
+    color: #000; 
+ }
+ .input-box input{
+    border: none;
  }
  #input-4,  #input-4 input{
     background-color: #FF5400;
     color: #fff;
     font-weight: 700;
  }
- .input-box input{
-    border: none;
- }
+
+ /*     End Hero Section style*/
 
 
-/*  End Hero Section */
+
+
 /* Start Popular Section  */
+
 .popular-tours{ 
-    max-width: 1440px;
-    width: 75%;
-    margin: 100px auto; 
     display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(12, 2fr);
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
     align-items: center;
     justify-content: center;
-
-}
-
-.list-item{
-    padding-left: 1rem;
-   
-}
-.list-item>li{
-   margin-bottom: 1.5rem; 
-   
-}
-
-
-.popular-tours-text{
-    width: 100%;
-    max-width: 577px;
-    grid-column: 1 /span 6;
-}
-.popular-tours-text > *{
-    margin-bottom: 2rem;
-}
-.popular-tours-image{
-    grid-column: 7 /span 6;  
 }
 .popular-tours-image img{
     width: 100%;
-    max-width: 500px;
-    max-height: 550px;
     height: 100%;
+    background-position: center;
+    background-size: cover;
     object-fit: cover;
+    border-radius: 16px;
 }
-.common-section-title{
+
+.popular-tours-text, .popular-tours-image{
+    grid-column: auto/span 6;
+}
+
+.popular-tours-text h2{
     color: #131318;
     font-size: 40px;
     font-weight: 800;
- 
+    margin-bottom: 1rem;
 }
-.popular-description{
+.popular-tours-text p{
     color: rgba(19, 19, 24, 0.70);
     font-size: 1rem;
-    margin-bottom: 1.5rem;
+    line-height: 24px;
 }
-.destination-section{
-    max-width: 1440px;
-    width: 75%;
-    margin: 0 auto;
-    text-align: center;
+.popular-tours-text ul{
+    padding-left: 1rem; 
+    color: rgba(19, 19, 24, 0.70);
 }
-#destination-description{
-    text-align: center;
-    color: #000;
-    margin-bottom: 1rem;
+.popular-tours-text ul li{
+    line-height: 1.5rem;
+}
+/* End Popular Section */
 
+/* Start Destination Section */
+
+.destination-section h2{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
 }
+.destination-section p{
+    margin-bottom: 1.5rem;
+    color: rgba(19, 19, 24, 0.70);
+}
+/* End Destination Section */
+
+
+
 /* End Popular Section  */
 
-/* StartTouring Spot Section */
-
-
+/* Start Touring Spot Section */
 
 
 .item {
@@ -318,37 +298,27 @@ nav>ul>li{
 /* End Touring Spot Section */
 
 /* Start Choose Section */
-    .destination-Choose{
-    max-width: 1440px;
-    width: 75%;
-    margin: 130px auto; 
-    
-    }
-    .choose-text{
-       text-align: center;
-       margin-bottom: 30px;
-     
-    }
- 
-    #choose-description{
-        color: #000;
-        font-size: 1rem;
-        padding: 24px 0;
-    }
-    .common-choose-subtitle{
-        color: #131318;
-        font-size: 24px;
-        font-weight: 800;
-      
-    } 
-    .choose-section-description{
-        color: rgba(19, 19, 24, 0.70);
-        font-size: 1rem;
-        line-height: 26px;
-       
+.choose-us-section h2{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
 
-    }
-    .choose-box{
+}
+.choose-us-section h3{
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+    margin-bottom: 1rem;
+}
+
+.choose-us-section p{
+     margin-bottom: 1rem;
+     color: rgba(19, 19, 24, 0.70); 
+     line-height: 1.5rem;
+}
+   
+    .choose-us-box{
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -357,36 +327,75 @@ nav>ul>li{
         align-items: center;
         border-radius: 18px;
     }
-    .choose-subtitle-box-1, .choose-subtitle-box-2, .choose-subtitle-box-3{
+    .choose-us-1, .choose-us-2, .choose-us-3{
         border: 1px  solid red;
         max-width: 500px;
         width: 100%;
         min-height: 300px;
         padding: 24px;
         border-radius: 16px;
+        line-height: 1.5rem;
     }
 
-  .choose-subtitle-box-1{    
+  .choose-us-1{    
     border: 1px solid rgba(251, 181, 99, 0.20);
     background: rgba(251, 181, 99, 0.05); 
     grid-column: auto/span 6;
     }
-    .choose-subtitle-box-2{
+    .choose-us-2{
         border: 1px solid rgba(41, 206, 246, 0.20);
         background: rgba(41, 206, 246, 0.05);
         grid-column: auto/span 6;
     }
-    .choose-subtitle-box-3{
+    .choose-us-3{
         border: 1px solid rgba(233, 68, 68, 0.20);
         background: rgba(233, 68, 68, 0.05);
          grid-column: 4/span 6;
     }
 
 /* End Choose Section */
-.card{
-    max-width: 1440px;
-    width: 75%;
+.common-button{
+    color: #FFF;
+    border-radius: 8px;
+    background: #FF5400;
+    font-size: 16px;
+    font-weight: 700;
+    border: 0;
+    padding: 12px 1.5rem;
+    
+}
+.common-section-title{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.common-text-design{
+    width: 60%;
     margin: 0 auto;
+    text-align: center;
+}
+
+/* Start Deal & Discount Section */
+/* End Deal & Discount Section */
+.discount-section h2{
+    color: #131318;
+    font-size: 40px;
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+
+}
+.discount-section h3{
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+
+}
+
+.discount-section p{
+     margin-bottom: 1rem;
+     color: rgba(19, 19, 24, 0.70); 
+     line-height: 1.5rem;
 }
 .card>*{
     margin-bottom: 1rem;
@@ -396,6 +405,8 @@ nav>ul>li{
     background-image: url('../images/Group\ 39.png');
     background-repeat: no-repeat;
     object-fit: cover;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: flex-end;
     padding: 55px 56px;
@@ -404,6 +415,8 @@ nav>ul>li{
     background-image: url('../images/Group\ 39.png');
     background-repeat: no-repeat;
     object-fit: cover;
+    background-position: center;
+    background-size: cover;
     display: flex;
     justify-content: flex-start;
     padding: 55px 56px;
@@ -417,19 +430,23 @@ nav>ul>li{
     border: 2px solid #FFF;
     background: rgba(255, 255, 255, 0.80);
     padding: 1.5rem;
-
 }
-
 .box-1  span, .box-2 span, .box-3 span{
     margin-right:1.5rem ;
     text-align: center;
     margin-bottom: 12px;
 }
-.card-description{
-    color: #000;
+.card h3{
+    color: #131318;
+    font-size: 24px;
+    font-weight: 800;
+}
+.card p{
+    color: rgba(19, 19, 24, 0.70); 
     font-size: 1rem;
     padding: 16px 0;
 }
+
 .package-price{
     color: #FF5400;
 
@@ -477,11 +494,10 @@ font-weight: 800;
     font-weight: 800;
     }
     .picks-package{
-        max-width: 1440px;
-        width: 75%;
+      
         display: flex;
         align-items: center;
-        margin: 0 auto;
+   
         justify-content: space-around;
         gap: 2rem;
         margin-top: 0;
@@ -522,11 +538,10 @@ font-weight: 800;
         font-weight: 800;
     }
     .newsletter{
-        max-width: 1440px;
-        width: 75%;
+        
         display: flex;
         align-items: center;
-        margin: 0 auto;
+
         justify-content: space-between;
         gap: 3rem;
         padding: 40px 0;
@@ -589,8 +604,8 @@ font-weight: 800;
         border-radius: 10px;
         padding: 12px;
         position: absolute;
-        bottom: 100px;
-        left: 60%;
+        right: 0;
+        bottom: 15%;
         transform: rotate(-45deg);
  
     }
@@ -669,40 +684,20 @@ font-weight: 800;
 
 
 /* Popular Section for Mobile */
-.position-image{
-   
+.position-image,.input-div, .popular-tours, .gallery, .choose-us-box{
     grid-template-columns: 1fr;
+    row-gap: 1rem; 
 }
-
-.popular-tours-text{
-    grid-column: 1 /span 1;
-    grid-row: 1 /span 1;
-}
-.popular-tours-image{
-    grid-column: 1 /span 1;
-     grid-row: 2 /span 1;  
-}
-.input-div{
-    grid-template-columns: repeat(1, 1fr);
-    row-gap: 1rem;   
- }
-/* End Popular Section for Mobile */
-
-/* Start Hero Section for Mobile */
-
 
 .hero-text{
     width: 100%;
-    text-align: center;
-    padding: 0.5rem 1rem ;
+    padding: 0.5rem 0 ;
 }
 .hero-text h2{
     font-size: 2rem;
     font-weight: 800;  
 }
-.hero-text p{
-    font-size: 1rem;
-}
+
 .common-button-main{
     color: #000;
     border-radius: 8px;
@@ -715,51 +710,40 @@ font-weight: 800;
 /* End Hero Section for Mobile */
 
 /* Start Popular Touring Spot Section */
-.popular-tours{
-grid-template-columns: 1fr;  
+.container > section{
+    margin-top: 1rem;
+}
+.common-text-design{
+    width: 100%; 
 }
 
-.common-section-title{
-    margin-bottom: 1rem;
+.popular-tours-text h2,.destination-section h2, .choose-us-section h2,.discount-section h2{
+    font-size: 1.5rem;
 }
-#destination-description{
-  padding-bottom: 1rem;
-}
-
-.gallery {
-    grid-template-columns: 1fr;
-}
-.gallery .item{
-   grid-column: auto;
-}
-   .choose-box{
-        grid-template-columns: 1fr; 
-    }
-     .choose-subtitle-box-1, .choose-subtitle-box-2, .choose-subtitle-box-3{    
-    grid-column: auto;
-    }
-   
-
-/*End Popular Touring Spot Section */
-
-.box-1, .box-2, .box-3{
-    max-width: 100%;
-    border-radius: 8px;
-    height: auto;
-    border: 2px solid #FFF;
-    background: rgba(255, 255, 255, 0.80);
-    padding: 0.5rem;
+.choose-us-section h3, .discount-section h3, .card h3{
+    font-size: 1.25;
 
 }
-
-.box-1.fa-person a, .box-2 .fa-person a , .box-3 .fa-person a{
-    font-size: 1rem;
-}
-.card-description{
-   
-    font-size: 0.8rem;
+.card p{
+    font-size: 0.75rem;
     padding: 8px 0;
 }
+
+.gallery .item, .choose-us-1, .choose-us-2, .choose-us-3{    
+    grid-column: auto;
+ }
+ 
+.box-1, .box-2, .box-3{
+    width: 100%;
+    height: auto;
+    font-size: 0.75rem;
+}
+
+.box-1  span, .box-2 span, .box-3 span{
+    margin-right:0.5rem ;
+
+}
+
 .newsletter{
         flex-direction: column;
         gap: 1rem;
@@ -796,10 +780,5 @@ grid-template-columns: 1fr;
         margin: 0 auto;
      
     }
-    .common-section-title{
-
-    font-size: 1.5rem;
-  
- 
-}
+    
 }
